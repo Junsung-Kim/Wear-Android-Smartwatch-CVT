@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WearMainActivity"
+    tools:deviceIds="wear_round"
+    android:keepScreenOn="true"
+    android:id="@+id/layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/captureBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="changeCaptureFlag"
+                android:text="START"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/exitBth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onExit"
+                android:text="Exit"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/text"
+            android:textAppearance="@style/TextView.Small"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_round" />
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/wearSensorAccel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="acc" />
+
+            <RadioButton
+                android:id="@+id/wearSensorRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="rot" />
+
+            <RadioButton
+                android:id="@+id/wearSensorGRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="grv" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/wearOptionNothing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="not" />
+
+            <RadioButton
+                android:id="@+id/wearOptionKalman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="kal" />
+
+            <RadioButton
+                android:id="@+id/wearOptionR2D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextView.Small"
+                android:textColor="@color/white"
+                android:text="r2d" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="applySetting"
+            android:text="APPLY SETTING"
+            android:textAppearance="@style/TextView.Small"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>
